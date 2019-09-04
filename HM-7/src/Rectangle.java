@@ -29,6 +29,6 @@ public class Rectangle {
             System.out.println("can't close");
         }
 
-
+        scan.close();
     }
 }
