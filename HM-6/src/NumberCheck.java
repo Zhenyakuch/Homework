@@ -1,5 +1,6 @@
 import java.util.Scanner;
-
+/*Создайте число. Определите, является ли число трехзначным. Определите, является
+ли его последняя цифра семеркой. Определите, является ли число четным.*/
 public class NumberCheck
 {
     public static void main(String[] args) {
