@@ -33,5 +33,6 @@ public class NumberCheck
         } else {
             System.out.println(number + " - not even number");
         }
+        scan.close();
     }
 }
