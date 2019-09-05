@@ -23,9 +23,6 @@ public class RandomRevert {
 
         }
 
-//        for (int i = 0; i <m.length ; i++) {
-//            m[i] = random.nextInt(999) + 1;
-//            System.out.print(" " + m[i]);
-//        }
+
     }
 }
