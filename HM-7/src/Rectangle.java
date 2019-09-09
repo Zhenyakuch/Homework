@@ -10,24 +10,21 @@ public class Rectangle {
         Scanner scan = new Scanner(System.in);
         System.out.print("Input a:  ");
         double a = scan.nextDouble();
-
         System.out.print("Input b: ");
         double b = scan.nextDouble();
+        double c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+        System.out.print("Input r: ");
+        double r  = scan.nextDouble();
+        double d = 2*r;
 
-        double square_rect = a * b;
-        System.out.println("Square rectangle = "  + square_rect);
-
-        System.out.print("Input radius: ");
-        double radius = scan.nextDouble();
-        double pi = Math.PI;
-        double square_circle = pi*Math.pow(radius,2);
-        System.out.println("Square circle = " + square_circle);
-
-        if (square_circle > square_rect){
-            System.out.println("can close");
-        }else {
-            System.out.println("can't close");
+        if (d >=c){
+            System.out.println("can");
+        }else{
+            System.out.println("can't");
         }
+
+
+
 
         scan.close();
     }
