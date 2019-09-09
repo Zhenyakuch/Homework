@@ -19,34 +19,44 @@ public class SumBetween {
         int index_max = 0;
         int index_min = 0;
 
+
+        int[] maxim = new int[10];
         for(int i = 0; i < marks.length; i++){
-            if(max < marks[i]){
+            if (max < marks[i]) {
                 max = marks[i];
                 index_max = i;
-                // System.out.println();
             }
 
             if(min > marks[i]){
                 min = marks[i];
                 index_min = i;
-                // System.out.println();
             }
         }
+        for (int i = 0; i < marks.length; i++) {
+            if (max == marks[i]) {
+                index_max = i;
+                System.out.println("index_max " + index_max + "            max_number = " + max);
+            }
+            if (min == marks[i]) {
+                index_min = i;
+                System.out.println("index_min " + index_min + "            mun_number = " + min);
 
-int sum = 0;
-        if(index_min < index_max){
-            for (int i = index_min; i < index_max -1; i++) {
-                sum += marks[i+1];
+            }
+            int sum = 0;
+            if (index_min < index_max) {
+                for (int k = index_min; k < index_max - 1; k++) {
+                    sum += marks[k + 1];
 
-            } System.out.println("sum = "+sum);
-        }else{
-            for (int i = index_max; i < index_min - 1; i++) {
-                sum += marks[i+1];
+                }
+                System.out.println("sum = " + sum);
+            } else {
+                for (int j = index_max; j < index_min - j; j++) {
+                    sum += marks[j + 1];
 
-            }System.out.println("sum = " + sum);
-        }
+                }
+                System.out.println("sum = " + sum);
+            }
 
-        System.out.println("max - " + max +  "  index = " + index_max);
-        System.out.println("min - " + min+  "  index = " + index_min);
+        }}
     }
-}
+
