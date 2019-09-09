@@ -6,39 +6,23 @@ rand.nextInt() ). Это число – количество денег в ру�
 */
 public class Money {
     public static void main(String[] args) {
-        Random random = new Random();
+        Random random = new Random(1000);
         int x = random.nextInt();
         System.out.print(x);
 
         int last = x%10;
-        switch (last){
-            case 1:
-            case -1:
-                System.out.println(" рубль");
-                break;
-            case 2:
-            case 3:
-            case 4:
-            case -2:
-            case -3:
-            case -4:
-                System.out.println(" рубля");
-                break;
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-            case 0:
-            case -5:
-            case -6:
-            case -7:
-            case -8:
-            case -9:
-                System.out.println(" рублей");
-                break;
 
-        }
+       if (last == 1 & last ==-1){
+                System.out.println(" рубль");
+               }else if (last == 2 & last == -2 & last == 3 & last == -3 & last == 4 & last == -4)
+                 {
+            System.out.println(" рубля");
+       }else if (last == 0 && last == 5 && last == -5 && last == 6 && last == -6 && last == 7 && last == -7 && last == 8 && last == -8 &&
+                 last == 9 && last == -9 && last == 11 && last == 12 && last == 13 && last == 14 && last == 15 && last == 16 && last == 17 &&
+                 last == 18 && last == 19)
+         {
+            System.out.println(" рублей");
+       }
 
 
     }
