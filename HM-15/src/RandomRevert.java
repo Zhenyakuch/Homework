@@ -8,21 +8,25 @@ import java.util.Random;
 
 public class RandomRevert {
     public static void main(String[] args) {
-        Random random = new Random();
-        int m[] = new int[10];
+        Random rand = new Random();
+        int[] array = new int[rand.nextInt(6) + 14];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = rand.nextInt(20);
+        }
 
-        for (int i = 0; i <m.length ; i++) {
-            m[i] = random.nextInt(999) + 1;
-            System.out.print(" " + m[i]);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + "  ");
+        }
+
+        for (int i = 0; i < array.length/2; i++) {
+            int tmp = array[i];
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = tmp;
+
         }
         System.out.println();
-        int temp;
-        int n = m.length;
-        for (int i=m.length-1; i>=0; --i) {
-          System.out.print(" " + m[i]);
-
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + "  ");
         }
-
-
     }
 }
