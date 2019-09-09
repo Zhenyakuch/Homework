@@ -20,20 +20,33 @@ public class RandMaxMin {
         int index_max = 0;
         int index_min = 0;
 
+
+        int[] maxim = new int[10];
         for(int i = 0; i < marks.length; i++){
-            if(max < marks[i]){
-                max = marks[i];
-                 index_max = i;
-               // System.out.println("index" + i);
-            }
+                if (max < marks[i]) {
+                    max = marks[i];
+                    index_max = i;
+                }
 
             if(min > marks[i]){
                 min = marks[i];
                 index_min = i;
-               // System.out.println("index" + i);
             }
         }
-        System.out.println("max - " + max +  "  index = " + index_max);
-        System.out.println("min - " + min+  "  index = " + index_min);
+        for (int i = 0; i < marks.length; i++) {
+            if (max == marks[i]){
+                index_max = i;
+                System.out.println("index_max " + index_max + "            max_number = " + max);
+
+            }
+        }
+        for (int i = 0; i < marks.length; i++) {
+            if (min == marks[i]){
+                index_min = i;
+                System.out.println("index_min " + index_min + "            mun_number = " + min);
+
+            }
+        }
+
     }
 }
