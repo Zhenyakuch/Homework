@@ -1,5 +1,5 @@
 /*
-10. Посчитать факториал числа в границах от 10 до 15 (не используя рекурсию).
+10. Посчитать факториал числа  (не используя рекурсию).
 11. Имеется целое число, определить является ли это число простым, т.е.
 делится без остатка только на 1 и себя.
 12. Найдите сумму первых n целых чисел, которые делятся на 3.
@@ -15,13 +15,15 @@ public class Numbers {
       zadanie_12();
     }
     public static void zadanie_10(){
-        int x = 10;
-        int y=10;
-        for (int i=10; i<=15; i++) {
-            y++;
-             x*=y;
-            System.out.println(x);
-        }
+        Scanner scan = new Scanner(System.in);
+        System.out.println("input number");
+        int number = scan.nextInt();
+
+        int fact = 1;
+        for (int i = 1; i < number ; i++) {
+            fact*=i;
+
+        } System.out.println(fact);
         
     }
     public static void zadanie_11(){
@@ -46,27 +48,15 @@ public class Numbers {
     public static void zadanie_12() throws InterruptedException {
         Scanner scanner  = new Scanner(System.in);
         System.out.println("Input amount of numbers");
-
         int n = scanner.nextInt();
 
-        Random random = new Random();
-        int [] numb = new int[n];
-
-        for (int i = 0; i <numb.length; i++) {
-            numb[i] = random.nextInt(9) + 1;
-            System.out.print(numb[i] + "  ");
-        }
-
-        System.out.println();
-
         int sum = 0;
-        for (int i = 0; i <numb.length; i++) {
-            int x = numb[i]%3;
-            if (x == 0){
-                System.out.println("number%3 = 0 : "  + numb[i]);
-                sum+=numb[i];
-            }
+        for (int i = 3; i <n; i+=3) {
+            sum += i;
+
         }
-        System.out.println("sum = " + sum);
+        System.out.print("sum = " + sum);
+
+
     }
 }
