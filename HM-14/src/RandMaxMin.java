@@ -24,13 +24,13 @@ public class RandMaxMin {
             if(max < marks[i]){
                 max = marks[i];
                  index_max = i;
-               // System.out.println();
+               // System.out.println("index" + i);
             }
 
             if(min > marks[i]){
                 min = marks[i];
                 index_min = i;
-               // System.out.println();
+               // System.out.println("index" + i);
             }
         }
         System.out.println("max - " + max +  "  index = " + index_max);
