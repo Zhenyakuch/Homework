@@ -10,8 +10,8 @@ import java.util.Scanner;
 
 public class Numbers {
     public static void main(String[] args) throws InterruptedException {
-      zadanie_10();
-      zadanie_11();
+     // zadanie_10();
+     // zadanie_11();
       zadanie_12();
     }
     public static void zadanie_10(){
@@ -51,7 +51,7 @@ public class Numbers {
         int n = scanner.nextInt();
 
         int sum = 0;
-        for (int i = 3; i <n; i+=3) {
+        for (int i = 3; i <n*3; i+=3) {
             sum += i;
 
         }
