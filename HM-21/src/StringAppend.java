@@ -14,12 +14,10 @@ public class StringAppend {
                 "Следовательно, если вы работаете с многопоточностью, Вам идеально подходит\n" +
                 "StringBuffer, иначе используйте StringBuilder, который работает намного быстрее в\n" +
                 "большинстве реализаций.";
-        String two = "Регулярные выражения используются в случае, если необходимо выполнить\n" +
-                "проверку текста в строке на соответствие определенному шаблону. Например, в\n" +
-                "тексте необходимо найти числа, в том числе отрицательные, то есть\n" +
-                "последовательности цифр, которые могут начинаться со знака минус.";
-        for (int i = 0; i <100000 ; i++) {
-            String three = one + two;
+
+        String three = null;
+        for (int i = 0; i <1000 ; i++) {
+             three += one;
 
         }
         long stopTime1 = System.currentTimeMillis();
@@ -28,9 +26,9 @@ public class StringAppend {
 
         long startTime2 = System.currentTimeMillis();
         StringBuilder str1 = new StringBuilder(one);
-        StringBuilder str2 = new StringBuilder(two);
-        for (int i = 0; i <100000 ; i++) {
-            StringBuilder str3 = str1.append(str2);
+        StringBuilder str3 =  new StringBuilder();
+        for (int i = 0; i <1000 ; i++) {
+             str3 = str3.append(str1);
 
         }
         long stopTime2 = System.currentTimeMillis();
@@ -39,9 +37,9 @@ public class StringAppend {
 
         long startTime3 = System.currentTimeMillis();
         StringBuffer str_one = new StringBuffer(one);
-        StringBuffer str_two = new StringBuffer(two);
-        for (int i = 0; i <100000 ; i++) {
-            StringBuffer str_three = str_one.append(str_two);
+        StringBuffer str_three = new StringBuffer();
+        for (int i = 0; i <1000 ; i++) {
+             str_three = str_three.append(str_one);
 
         }
         long stopTime3 = System.currentTimeMillis();
