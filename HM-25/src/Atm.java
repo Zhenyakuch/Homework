@@ -7,19 +7,27 @@
 конструктор с тремя параметрами – количеством купюр.
  */
 public class Atm {
-    private static final int bill_20 = 20;
-    private static final int bill_50 = 50;
-    private static final int bill_100 = 100;
+    private static int bill_20 ;
+    private static  int bill_50 ;
+    private static  int bill_100;
 
+    private Atm(int bill_20, int bill_50, int bill_100){
 
+        this.bill_20 = bill_20;
+        this.bill_50 = bill_50;
+        this.bill_100 = bill_100;
+
+    }
 
     public void minus_money(){
 
     }
 
-    public int plus_money(){
+    public void plus_money(){
 
     }
+
+
 
 
 
@@ -31,8 +39,6 @@ public class Atm {
         Atm atm1 = new Atm();
         Atm atm2 = new Atm();
         Atm atm3 = new Atm();
-        Atm atm4 = new Atm();
-        Atm atm5 = new Atm();
 
 
     }
