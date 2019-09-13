@@ -14,11 +14,9 @@ public class Pattern_Matcher {
         String str = "0x7FFF мама  0x7AAF мыла      раму";
         Pattern p = Pattern.compile("0x[A-Fa-f0-9]{1,4}");
         Matcher m = p.matcher(str);
-        for (int i = 0; i < str.length() ; i++) {
             while (m.find()) {
                 System.out.println(m.start() + " " + m.end());
             }
-        }
 
 
 
