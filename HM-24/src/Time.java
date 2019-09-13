@@ -20,17 +20,17 @@ public class Time {
         this.minute = minute;
 
     }
-     public int Seconds(){
+     public int seconds(){
         second = second + hour*60*60;
         second = second + (int)minute*60;
          System.out.println("Общее количество секунд объекта  " + second);
          return second;
      }
 
-    public void CompareTo(Time time2){
+    public void compareto(Time time2){
         Time time1 = new Time(this.second, this.hour);
-        int sec1 = time1.Seconds();
-        int sec2 = time2.Seconds();
+        int sec1 = time1.seconds();
+        int sec2 = time2.seconds();
 
         if(sec1>sec2){
             System.out.printf("sec1 > sec2  ");
@@ -49,7 +49,7 @@ public class Time {
     public static void main(String[] args) { //add comment
          Time time1 = new Time(49, 4);
          Time time2 = new Time(55, 240L);
-         time1.CompareTo(time2);
+         time1.compareto(time2);
 
 
     }
