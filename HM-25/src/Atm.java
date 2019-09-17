@@ -16,7 +16,7 @@ public class Atm {
     private static int nal;//снятые наличные
     private static boolean result;
     private static int operation;
-    private static int nominal[];
+    private static int[] nominal;
 
     private Atm(int bill_20, int bill_50, int bill_100) {
 
@@ -36,16 +36,11 @@ public class Atm {
         } else {
             int[] count = new int[nominal.length]; //кол-во купюр выдать
             int index = nominal.length - 1;
-
             while (index != -1) {
                 count[index] = nal / nominal[index];
                 nal %= nominal[index];
                 index--;
             }
-//            for (int i = 0; i < count.length; i++) {
-//                System.out.printf("Номинал в %d руб. = %d шт.\n", nominal[i], count[i]);
-//            }
-
             if(nal==0){
                 for (int i = 0; i < count.length; i++) {
                     System.out.printf("Номинал в %d руб. = %d шт.\n", nominal[i], count[i]);
@@ -53,21 +48,14 @@ public class Atm {
                 System.out.println("Операция завершена успешно");
             }else{
                 System.out.println("Сумма введена неверно. Имеющиеся номиналы: 20, 50, 100");
-
             }
-
             result = true;
         }
         return result;
-
-
-
-
     }
 
 
-    public static void plus_money(){
-
+    private static void plus_money(){
         moneys+=nal;
     }
 
@@ -92,7 +80,5 @@ public class Atm {
                 minus_money(nal);
                 break;
         }
-
-
     }
 }
