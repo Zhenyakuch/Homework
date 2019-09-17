@@ -1,9 +1,23 @@
+import tech.Techno;
+
 public class Microwave extends Techno {
-    Microwave(){
+    private int wt;
+
+    Microwave(int wt){
         super("Микроволновка " ,"черный", 15,"металл");
+        this.wt = wt;
+        System.out.println("Напряжение: " + wt);
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return "Microwave{" +
+                "wt=" + wt +
+                ", name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                ", weight=" + weight +
+                ", material='" + material + '\'' +
+                '}';
+    }
 }
