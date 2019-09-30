@@ -7,9 +7,10 @@
 import java.util.ArrayList;
 import java.util.Map;
 
-public class Box <T> {
+public class Box  {
 
     public static <E> void  sid  (String s, E [] arr){
+
 
         E [] a = arr;
         AnyTapeArray <E> sid = new AnyTapeArray <E> ();
