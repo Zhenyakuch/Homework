@@ -23,16 +23,15 @@ public class People {
         System.out.println();
         Iterator iterator = list.iterator();
 
+        Integer value = null;
         while (iterator.hasNext()) {
-            Integer value = (Integer) iterator.next();
-            if (value>=value+1){
-                max=value;
+            value = (Integer) iterator.next();
+            if (value > max) {
+                max = value;
             }
 
-            System.out.print(value + " ");
-            System.out.println("!!!!!!!"+max);
-
         }
+        System.out.println("max element: " + max);
 
     }
 
