@@ -2,9 +2,12 @@ package translator;
 
 import directory.Dictionary;
 
+import java.util.Stack;
+
 import static directory.Dictionary.UNITS;
 
 public class BaseTranslator {
+
 
     public static String translator(Integer number){
         StringBuilder result = new StringBuilder();
@@ -16,7 +19,7 @@ public class BaseTranslator {
 
             if(last!=0){
                 switch (last){
-                    case UNITS :
+                    case UNITS : //как использовать здесь перечисления правильно?(((((((   :(
                         if (last == '1') result.append("один");
                         else  if (last == '2') result.append("два");
                 }
@@ -28,11 +31,8 @@ public class BaseTranslator {
 
     }
 
-
-
-
-
     public static void main(String[] args) {
-        System.out.println(new BaseTranslator().translator(123));
+        System.out.println(new BaseTranslator().translator(123456));
+
     }
 }

@@ -1,11 +1,11 @@
 package directory;
 
-public enum Dictionary {
-    UNITS ,
+public enum  Dictionary {
+     UNITS ,
     DECADES,
     HUNDREDS,
     THOUSANDS,
     MILLIONS,
-    BILLIONS
+    BILLIONS;
 
 }
