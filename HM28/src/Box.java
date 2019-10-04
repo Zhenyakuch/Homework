@@ -4,8 +4,6 @@
         массива по индексу.
 */
 
-import java.util.ArrayList;
-import java.util.Map;
 
 public class Box  {
 

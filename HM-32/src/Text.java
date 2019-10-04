@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 
 public class Text {
 
+    Text jbj = new Text();
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -28,7 +30,7 @@ public class Text {
         }
 
         System.out.printf("\ncount: %d\n", hashMap.size());
-        
+
         for(Map.Entry<String, Integer> entry : hashMap.entrySet())
             System.out.printf("%s -> %d\n", entry.getKey(), entry.getValue());
     }
