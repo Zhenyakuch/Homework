@@ -5,72 +5,243 @@ import directory.Dictionary;
 import java.util.Scanner;
 
 public class BaseTranslator {
+    private static int count = 0;
+    private static int last = 0;
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-         Integer number = scanner.nextInt();
+        Integer number = scanner.nextInt();
 
         String str = number.toString();
         StringBuffer stringBuffer = new StringBuffer(str);
-        System.out.println(stringBuffer.reverse());
 
         String str2 = String.valueOf(stringBuffer.reverse());
         System.out.println(str2);
 
-         int last = 0;
-         int count = 0;
+        Integer reverse_number = Integer.parseInt(str2);
+
+        count = str2.length() + 1;
+
+        for (int i = 0; i < str.length(); i++) {
+
+            last = reverse_number % 10;
+            reverse_number = reverse_number / 10;
+            count--;
 
 
-        for (int i = 0; i < str .length(); i ++) {
-
-            last = number %10;
-            number = number/10;
-            count++;
-
-
-            switch (count){
-                case 1:
-                    if(last == 1){System.out.printf(Dictionary.one);}
-                    else if(last == 2){System.out.printf(Dictionary.two);}
-                    else if(last == 3){System.out.printf(Dictionary.three);}
-                    else if(last == 4){System.out.printf(Dictionary.four);}
-                    else if(last == 5){System.out.printf(Dictionary.five);}
-                    else if(last == 6){System.out.printf(Dictionary.six);}
-                    else if(last == 7){System.out.printf(Dictionary.seven);}
-                    else if(last == 8){System.out.printf(Dictionary.eight);}
-                    else if(last == 9){System.out.printf(Dictionary.nine);}
-                    break;
-                case 2:
-                    if(last == 2){System.out.printf(Dictionary.two);}
-                    else if(last == 3){System.out.printf(Dictionary.three);}
-                    break;
-                case 3:
-
-                    break;
-                case 4:
-
-                    break;
-                case 5:
-
-                    break;
-                case 6:
-
-                    break;
-                case 7:
-
-                    break;
-                case 8:
-
-                    break;
-                case 9:
-
-                    break;
+//продумать 10 и нули 11 b 12 13 14
+            if (str.length() < 5) {
+               number_1();
+               number_2();
+               number_3();
+               number_4();
+            } else if (str.length() == 5) {
+                number_1();
+                number_2();
+                number_3();
+                number_4();
+               number_5();
+            }
+            else if (str.length() == 6) {
+                number_1();
+                number_2();
+                number_3();
+                number_4();
+                number_5();
+                number_6();
+            }
+            else if (str.length() == 7) {
+                number_1();
+                number_2();
+                number_3();
+                number_4();
+                number_5();
+                number_6();
+                number_7();
             }
 
-
+            scanner.close();
         }
-         scanner.close();
+
     }
 
+    private static void number_1() {
+        switch (count) {
+            case 1:
+                if (last == 0) {
+                    number_2();
+                } else if (last == 1) {
+                    System.out.printf(Dictionary.one);
+                } else if (last == 2) {
+                    System.out.printf(Dictionary.two);
+                } else if (last == 3) {
+                    System.out.printf(Dictionary.three);
+                } else if (last == 4) {
+                    System.out.printf(Dictionary.four);
+                } else if (last == 5) {
+                    System.out.printf(Dictionary.five);
+                } else if (last == 6) {
+                    System.out.printf(Dictionary.six);
+                } else if (last == 7) {
+                    System.out.printf(Dictionary.seven);
+                } else if (last == 8) {
+                    System.out.printf(Dictionary.eight);
+                } else if (last == 9) {
+                    System.out.printf(Dictionary.nine);
+                }
+                break;
+        }
+    }
+    private static void number_2() {
+        switch (count) {
+            case 2:
+                if (last == 1) {
+                    System.out.printf(Dictionary.ten[0]);
+                } else if (last == 2) {
+                    System.out.printf(Dictionary.ten[1]);
+                } else if (last == 3) {
+                    System.out.printf(Dictionary.ten[2]);
+                } else if (last == 4) {
+                    System.out.printf(Dictionary.ten[3]);
+                } else if (last == 5) {
+                    System.out.printf(Dictionary.ten[4]);
+                } else if (last == 6) {
+                    System.out.printf(Dictionary.ten[5]);
+                } else if (last == 7) {
+                    System.out.printf(Dictionary.ten[6]);
+                } else if (last == 8) {
+                    System.out.printf(Dictionary.ten[7]);
+                } else if (last == 9) {
+                    System.out.printf(Dictionary.ten[8]);
+                }
+                break;
+        }
+    }
+    private static void number_3() {
+        switch (count) {
+            case 3:
+                if (last == 1) {
+                    System.out.printf(Dictionary.hundred[0]);
+                } else if (last == 2) {
+                    System.out.printf(Dictionary.hundred[1]);
+                } else if (last == 3) {
+                    System.out.printf(Dictionary.hundred[2]);
+                } else if (last == 4) {
+                    System.out.printf(Dictionary.hundred[3]);
+                } else if (last == 5) {
+                    System.out.printf(Dictionary.hundred[4]);
+                } else if (last == 6) {
+                    System.out.printf(Dictionary.hundred[5]);
+                } else if (last == 7) {
+                    System.out.printf(Dictionary.hundred[6]);
+                } else if (last == 8) {
+                    System.out.printf(Dictionary.hundred[7]);
+                } else if (last == 9) {
+                    System.out.printf(Dictionary.hundred[8]);
+                }
+                break;
+        }
+    }
+    public static void number_4(){
+        switch (count) {
+            case 4:
+                if (last == 1) {
+                    System.out.printf(Dictionary.thousand[0]);
+                } else if (last == 2) {
+                    System.out.printf(Dictionary.thousand[1]);
+                } else if (last == 3) {
+                    System.out.printf(Dictionary.thousand[2]);
+                } else if (last == 4) {
+                    System.out.printf(Dictionary.thousand[3]);
+                } else if (last == 5) {
+                    System.out.printf(Dictionary.thousand[4]);
+                } else if (last == 6) {
+                    System.out.printf(Dictionary.thousand[5]);
+                } else if (last == 7) {
+                    System.out.printf(Dictionary.thousand[6]);
+                } else if (last == 8) {
+                    System.out.printf(Dictionary.thousand[7]);
+                } else if (last == 9) {
+                    System.out.printf(Dictionary.thousand[8]);
+                }
+                break;
+        }
+    }
+    private static void number_7() {
+        switch (count){
+            case 7:
+                if (last == 1) {
+                    System.out.printf(Dictionary.one + Dictionary.million[0]);
+                } else if (last == 2) {
+                    System.out.printf(Dictionary.two+ Dictionary.million[1]);
+                } else if (last == 3) {
+                    System.out.printf(Dictionary.three+ Dictionary.million[2]);
+                } else if (last == 4) {
+                    System.out.printf(Dictionary.four+ Dictionary.million[3]);
+                } else if (last == 5) {
+                    System.out.printf(Dictionary.five+ Dictionary.million[4]);
+                } else if (last == 6) {
+                    System.out.printf(Dictionary.six+ Dictionary.million[5]);
+                } else if (last == 7) {
+                    System.out.printf(Dictionary.seven+ Dictionary.million[6]);
+                } else if (last == 8) {
+                    System.out.printf(Dictionary.eight+ Dictionary.million[7]);
+                } else if (last == 9) {
+                    System.out.printf(Dictionary.nine+ Dictionary.million[8]);
+                }
+        }
+    }
 
+    private static void number_6() {
+        switch (count){
+            case 6:
+                if (last == 1) {
+                    System.out.printf( Dictionary.hundred[0]);
+                } else if (last == 2) {
+                    System.out.printf(Dictionary.hundred[1]);
+                } else if (last == 3) {
+                    System.out.printf( Dictionary.hundred[2]);
+                } else if (last == 4) {
+                    System.out.printf( Dictionary.hundred[3]);
+                } else if (last == 5) {
+                    System.out.printf( Dictionary.hundred[4]);
+                } else if (last == 6) {
+                    System.out.printf( Dictionary.hundred[5]);
+                } else if (last == 7) {
+                    System.out.printf(Dictionary.hundred[6]);
+                } else if (last == 8) {
+                    System.out.printf( Dictionary.hundred[7]);
+                } else if (last == 9) {
+                    System.out.printf(Dictionary.hundred[8]);
+                }
+        }
+    }
+
+    private static void number_5() {
+        switch (count) {
+            case 5:
+                if (last == 1) {
+                    System.out.printf(Dictionary.ten[0]);
+                } else if (last == 2) {
+                    System.out.printf(Dictionary.ten[1]);
+                } else if (last == 3) {
+                    System.out.printf(Dictionary.ten[2]);
+                } else if (last == 4) {
+                    System.out.printf(Dictionary.ten[3]);
+                } else if (last == 5) {
+                    System.out.printf(Dictionary.ten[4]);
+                } else if (last == 6) {
+                    System.out.printf(Dictionary.ten[5]);
+                } else if (last == 7) {
+                    System.out.printf(Dictionary.ten[6]);
+                } else if (last == 8) {
+                    System.out.printf(Dictionary.ten[7]);
+                } else if (last == 9) {
+                    System.out.printf(Dictionary.ten[8]);
+                }
+                break;
+        }
+    }
 }
+
