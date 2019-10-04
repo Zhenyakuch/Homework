@@ -60,6 +60,27 @@ public class BaseTranslator {
                 number_6();
                 number_7();
             }
+            else if (str.length() == 8) {
+                number_1();
+                number_2();
+                number_3();
+                number_4();
+                number_5();
+                number_6();
+                number_7();
+                number_8();
+            }
+            else if (str.length() == 9) {
+                number_1();
+                number_2();
+                number_3();
+                number_4();
+                number_5();
+                number_6();
+                number_7();
+                number_8();
+                number_9();
+            }
 
             scanner.close();
         }
@@ -93,6 +114,7 @@ public class BaseTranslator {
                 break;
         }
     }
+
     private static void number_2() {
         switch (count) {
             case 2:
@@ -143,7 +165,7 @@ public class BaseTranslator {
                 break;
         }
     }
-    public static void number_4(){
+    public  static void number_4() {
         switch (count) {
             case 4:
                 if (last == 1) {
@@ -164,6 +186,55 @@ public class BaseTranslator {
                     System.out.printf(Dictionary.thousand[7]);
                 } else if (last == 9) {
                     System.out.printf(Dictionary.thousand[8]);
+                }
+                break;
+        }
+    }
+    private static void number_6() {
+        switch (count){
+            case 6:
+                if (last == 1) {
+                    System.out.printf( Dictionary.hundred[0]);
+                } else if (last == 2) {
+                    System.out.printf(Dictionary.hundred[1]);
+                } else if (last == 3) {
+                    System.out.printf( Dictionary.hundred[2]);
+                } else if (last == 4) {
+                    System.out.printf( Dictionary.hundred[3]);
+                } else if (last == 5) {
+                    System.out.printf( Dictionary.hundred[4]);
+                } else if (last == 6) {
+                    System.out.printf( Dictionary.hundred[5]);
+                } else if (last == 7) {
+                    System.out.printf(Dictionary.hundred[6]);
+                } else if (last == 8) {
+                    System.out.printf( Dictionary.hundred[7]);
+                } else if (last == 9) {
+                    System.out.printf(Dictionary.hundred[8]);
+                }
+        }
+    }
+    private static void number_5() {
+        switch (count) {
+            case 5:
+                if (last == 1) {
+                    System.out.printf(Dictionary.ten[0]);
+                } else if (last == 2) {
+                    System.out.printf(Dictionary.ten[1]);
+                } else if (last == 3) {
+                    System.out.printf(Dictionary.ten[2]);
+                } else if (last == 4) {
+                    System.out.printf(Dictionary.ten[3]);
+                } else if (last == 5) {
+                    System.out.printf(Dictionary.ten[4]);
+                } else if (last == 6) {
+                    System.out.printf(Dictionary.ten[5]);
+                } else if (last == 7) {
+                    System.out.printf(Dictionary.ten[6]);
+                } else if (last == 8) {
+                    System.out.printf(Dictionary.ten[7]);
+                } else if (last == 9) {
+                    System.out.printf(Dictionary.ten[8]);
                 }
                 break;
         }
@@ -192,35 +263,9 @@ public class BaseTranslator {
                 }
         }
     }
-
-    private static void number_6() {
-        switch (count){
-            case 6:
-                if (last == 1) {
-                    System.out.printf( Dictionary.hundred[0]);
-                } else if (last == 2) {
-                    System.out.printf(Dictionary.hundred[1]);
-                } else if (last == 3) {
-                    System.out.printf( Dictionary.hundred[2]);
-                } else if (last == 4) {
-                    System.out.printf( Dictionary.hundred[3]);
-                } else if (last == 5) {
-                    System.out.printf( Dictionary.hundred[4]);
-                } else if (last == 6) {
-                    System.out.printf( Dictionary.hundred[5]);
-                } else if (last == 7) {
-                    System.out.printf(Dictionary.hundred[6]);
-                } else if (last == 8) {
-                    System.out.printf( Dictionary.hundred[7]);
-                } else if (last == 9) {
-                    System.out.printf(Dictionary.hundred[8]);
-                }
-        }
-    }
-
-    private static void number_5() {
+    private static void number_8() {
         switch (count) {
-            case 5:
+            case 8:
                 if (last == 1) {
                     System.out.printf(Dictionary.ten[0]);
                 } else if (last == 2) {
@@ -238,9 +283,32 @@ public class BaseTranslator {
                 } else if (last == 8) {
                     System.out.printf(Dictionary.ten[7]);
                 } else if (last == 9) {
-                    System.out.printf(Dictionary.ten[8]);
+                    System.out.printf(Dictionary.ten[8] );
                 }
-                break;
+        }
+    }
+    private static void number_9() {
+        switch (count) {
+            case 9:
+                if (last == 1) {
+                    System.out.printf(Dictionary.hundred[0]);
+                } else if (last == 2) {
+                    System.out.printf(Dictionary.hundred[1]);
+                } else if (last == 3) {
+                    System.out.printf(Dictionary.hundred[2]);
+                } else if (last == 4) {
+                    System.out.printf(Dictionary.hundred[3]);
+                } else if (last == 5) {
+                    System.out.printf(Dictionary.hundred[4]);
+                } else if (last == 6) {
+                    System.out.printf(Dictionary.hundred[5]);
+                } else if (last == 7) {
+                    System.out.printf(Dictionary.hundred[6]);
+                } else if (last == 8) {
+                    System.out.printf(Dictionary.hundred[7]);
+                } else if (last == 9) {
+                    System.out.printf(Dictionary.hundred[8] );
+                }
         }
     }
 }
